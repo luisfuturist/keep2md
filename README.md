@@ -1,33 +1,43 @@
 # keep2md
 
-It is a script to copy Google Keep notes into markdown files.
+`keep2md` is a script designed to facilitate the conversion of Google Keep notes into markdown files.
 
 ## Features
 
-* Generate multiple files;
-* Rename duplicate files.
+* Generates multiple markdown files;
+* Automatically renames duplicate files to avoid conflicts.
 
-## Important
+## Requirements
 
-* It requires Google Service account;
-* Don't forget to configure `keep2md.config.js`;
-* Unfortunately, it doesn't support empty titles.
+- Node.js version 21.5.0 or higher.
+- NPM version 10.2.4 or higher.
 
 ## Installation
 
-```
-git clone https://github.com/luisfloat/keep2md.git
-cd cv/
+To get started, follow these simple steps:
+
+```bash
+git clone https://github.com/luisfuturist/keep2md.git
+cd keep2md/
 npm install
 ```
 
+## Important Notes
+
+- A [Google Service account](https://cloud.google.com/iam/docs/service-account-overview) is required for authorization. [Create Service Account Key page](https://console.cloud.google.com/apis/credentials/serviceaccountkey).
+- Remember to configure the `keep2md.config.js` file according to your needs.
+- **Title Constraints**: Unfortunately, `keep2md` does not support notes with empty titles.
+
 ## How to use?
 
-1. Selected all Google Keep notes and click "Copy to Google Docs";
-2. Open the generated document and copy the document ID in the URL into the `.env` (`DOC_ID=<id>`);
-3. Add your Google Service account as the collaborator to the document;
-4. Run: `npm run start`
+1. Select and copy the desired Google Keep notes to a new Google Doc. Click "Copy to Google Docs" to transfer the selected notes into a single document.
+2. Create a file named `.env` in the project directory if it doesn't exist.
+3. Obtain the document ID from the Google Doc URL.
+4. Add the following lines to the `.env` file, replacing `<id>` with the copied document ID and <name>.json with your actual service account key file name.
 
-## Author
-
-<a href="https://twitter.com/luisfloat"><img src="https://img.shields.io/badge/-Twitter-333333?style=flat-square&amp;logo=twitter" alt="Twitter"/></a> <a href="https://github.com/luisfloat"><img src="https://img.shields.io/badge/-GitHub-333333?style=flat-square&amp;logo=github" alt="GitHub"/></a> <a href="https://instagram.com/luisfloat"><img src="https://img.shields.io/badge/-Instagram-333333?style=flat-square&amp;logo=instagram" alt="Instagram"/></a> <a href="mailto:contact@luisfloat.com"><img src="https://img.shields.io/badge/-Gmail-333333?style=flat-square&amp;logo=gmail" alt="Gmail"/></a>
+    ```bash
+    DOCUMENT_ID=<id>
+    GOOGLE_SERVICE_ACCOUNT_KEY_FILE_PATH="secrets/<>.json"
+    ```
+5. Add your Google Service account as reader to the document.
+6. Run the script: npm run start to begin the conversion process.

@@ -1,30 +1,11 @@
 {
-  "name": "keep2md",
-  "version": "0.1.0",
-  "description": "Script to copy Google Keep notes into markdown files.",
-  "keywords": [
-    "google-keep",
-    "notes",
-    "script",
-    "markdown"
-  ],
-  "main": "src/index.js",
-  "author": "Luis Float <contact@luisfloat.com> (https://luisfloat.com)",
-  "license": "UNLICENSED",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/luisfloat/keep2md.git"
-  },
-  "homepage": "https://github.com/luisfloat/keep2md#readme",
-  "bugs": {
-    "url": "https://github.com/luisfloat/keep2md/issues"
-  },
+  "private": true,
+  "type": "module",
   "devDependencies": {
-    "dotenv": "^16.0.3"
+    "dotenv": "^16.4.5"
   },
   "dependencies": {
-    "googleapis": "^110.0.0",
-    "vesic-js": "github:inforgdev/vesic-js"
+    "googleapis": "^133.0.0"
   },
   "scripts": {
     "start": "node ./src/index.js"

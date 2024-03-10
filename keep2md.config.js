@@ -1,6 +1,5 @@
-module.exports = {
+export default {
     outDir: "output/",
     responseFile: "response.json",
-    keyFile: "secrets/docs-secrets.json",
     cache: false,
 };
